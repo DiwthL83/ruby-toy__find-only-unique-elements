@@ -3,14 +3,12 @@
 # once.
 def find_unique_elements(arr)
 
-arr = [1, 2, "three", "three", 4]
-counts = Hash.new 0
-arr.each do |ele|
-	counts[ele] += 1
-end
-
-counts.delete_if {|key, value| value > 1 }
-result = counts.keys #Array returned with keys for non-dupe values
-puts result
-
+	counts = Hash.new 0
+	arr.each do |ele|
+		counts[ele] += 1
+	end
+	
+	counts.delete_if {|key, value| value > 1 }
+	result = counts.keys #Array returned with keys for non-dupe values
+	puts result
 end
